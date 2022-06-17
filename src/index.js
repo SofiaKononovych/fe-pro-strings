@@ -32,7 +32,7 @@ export const replaceZAndVFromString = (string) => {
  */
 export const changeWord = (string, word, newWord) => {
 if (string.includes(word)){
-    return `${string.slice(0, string.indexOf(word))} ${newWord} ${string.slice((string.indexOf(word) + word.length))}`
+    return `${string.slice(0, string.indexOf(word))}${newWord}${string.slice((string.indexOf(word) + word.length))}`
 }else{
     return string;
 }
