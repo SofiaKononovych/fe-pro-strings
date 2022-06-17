@@ -6,9 +6,8 @@
  */
 export const replaceZAndVFromString = (string) => {
     let result = '';
-    let lowerString = string.toLowerCase();
-    for (let letter of lowerString){
-        if (letter.includes('z') || letter.includes('v')){
+    for (let letter of string){
+        if (letter.toLowerCase().includes('z') || letter.toLowerCase().includes('v')){
             result = `${result}*`;
 
         }else{
@@ -32,7 +31,7 @@ export const replaceZAndVFromString = (string) => {
  * @returns {string}
  */
 export const changeWord = (string, word, newWord) => {
-if (string.toLowerCase().includes(word)){
+if (string.includes(word)){
     return `${string.slice(0, string.indexOf(word))} ${newWord} ${string.slice((string.indexOf(word) + word.length))}`
 }else{
     return string;
